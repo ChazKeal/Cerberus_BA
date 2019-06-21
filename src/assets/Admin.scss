@@ -1,0 +1,114 @@
+.intro{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  font-family: 'VT323', monospace, "Times New Roman",
+       Times, serif;
+  color: black;
+
+  img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+  }
+
+  .all_container{
+    box-sizing: border-box;
+    border: 10px solid transparent;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+
+    .exit_button{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+      border: 4px solid black;
+      border-radius: 50%;
+      font-size: 5vw;
+      left: 91%;
+      top: 2vw;
+      width: 7vw;
+      height: 7vw;
+
+        a:link{
+          text-decoration: none;
+          color: black;
+        }
+        a:visited{
+          text-decoration: none;
+          color: black;
+          }
+      }
+
+
+    .cases{
+        flex-wrap: wrap;
+        font-size: 3.5vw;
+        margin: 2vh 5% 0 5%;
+        display:flex;
+        justify-content: center;
+      .case{
+          margin-right: 2%;
+          margin-top: 2%;
+          justify-content: center;
+          align-content: center;
+          display: flex;
+          color: black;
+          width: 29%;
+          border-radius: 20%;
+          border: 4px solid black;
+          background-color: #bcbfca;
+      }
+    }
+    .input_container{
+      position: absolute;
+      left:0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .input_box{
+        position: relative;
+        background: url(./pics/Cerberus_big_box.png) no-repeat center;
+        background-size: 100% 100%;
+        height: 75%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        font-size: 2.5vw;
+
+        textarea{
+          font-size: 40px;
+          resize: none´
+        }
+      }
+    }
+  }
+  .text{
+    font-size: 4.5vh;
+    position: absolute;
+    width: 86%;
+    margin-top: 6vh;
+    margin-left: 7%;
+    text-align: center;
+    justify-content: center;
+    font-family: Helvetica,serif;
+    font-style: normal;
+    background-color: #bcbfca;
+    border-radius: 5%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 4px solid black;
+    }
+}

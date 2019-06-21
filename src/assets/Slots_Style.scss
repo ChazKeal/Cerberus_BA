@@ -1,0 +1,429 @@
+.slotmachine_container{
+   padding-top: 56.25%;
+  // padding-bottom: 56.25%;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  font-family: 'VT323', monospace, "Times New Roman",
+       Times, serif;
+  button{
+    outline: none;
+  }
+
+  img{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+  }
+
+  .long_description_box{
+    position: absolute;
+    margin-left: 4vw;
+    margin-top: 2.5%;
+    border-radius: 50px;
+    border: 4px solid black;
+    background-color: #bcbfca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 3vw;
+    width: 90vw;
+    height: 93%;
+    box-shadow: 10px 5px 5px 1px rgba(0,0,0,0.7);
+
+    .long_description_text{
+      padding: 3%;
+    }
+    .close_ld_box{
+      position: absolute;
+      display: flex;
+      min-height: 50px;
+      min-width: 50px;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+      border: 4px solid black;
+      border-radius: 50%;
+      font-size: 5vw;
+      left: 90%;
+      top: 2vh;
+      width: 7vw;
+      height: 7vw;
+
+    }
+  }
+  .item_container{
+    box-sizing: border-box;
+    border: 10px solid transparent;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+
+    .header_container{
+      position: absolute;
+      width: 100%;
+      height: 13%;
+
+      .timer_box{
+        display: flex;
+        position: absolute;
+        background-color: #bcbfca;
+        border-radius: 30px;
+        border: 4px solid black;
+        height: 70%;
+        width: 22%;
+        top: 4vh;
+        left: 2%;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.25vw;
+      }
+
+      .save_counter_box{
+        display: flex;
+        position: absolute;
+        background-color: #bcbfca;
+        border-radius: 30px;
+        border: 4px solid black;
+        height: 45%;
+        width: 12%;
+        right: 12%;
+        top: 4vh;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.25vw;
+      }
+
+      .message_box{
+        display: flex;
+        position: absolute;
+        background-color: #bcbfca;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        left: 26%;
+        border: 4px solid black;
+        width: 47vw;
+        height: 15vh;
+        font-size: 2.5vw;
+      }
+
+      .menu_button{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+      border: 4px solid black;
+      border-radius: 50%;
+      font-size: 5vw;
+      left: 91%;
+      top: 2vw;
+      width: 7vw;
+      height: 7vw;
+
+        a:link{
+          text-decoration: none;
+          color: black;
+        }
+        a:visited{
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      .redo_button{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: yellow;
+        border: 4px solid black;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        font-size: 2.5vw;
+        left: 47%;
+        top: 15.5VH;
+        width: 6vw;
+        height: 4vw;
+
+      }
+    }
+
+    .box_container {
+      display:flex;
+      justify-content: space-around;
+      position: relative;
+      height: 11vh;
+      margin: 23vh 2% 0 2%;
+      display: flex;
+
+      .box {
+        background-color: #bcbfca;
+        border: 4px solid black;
+        border-radius: 60px;
+        justify-content:center;
+        align-items: center;
+        display:flex;
+        color: black;
+        width: 32%;
+        height: 13vh;
+        font-size: 5vh;
+      }
+      .box_right{
+        box-shadow: 10px 5px 5px 1px rgba(0,0,0,0.7);
+      }
+      .box_middle{
+        box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.7);
+      }
+      .box_left{
+        box-shadow: -10px 5px 5px 1px rgba(0,0,0,0.7)
+      }
+
+      .add_word_box{
+        display: flex;
+        font-size: 5vh;
+        width: 27vw;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .button_container{
+      position: relative;
+      display: flex;
+      color: white;
+      width: 100%;
+      height: 53vh;
+      margin-top: 11vh;
+
+      .upper_buttons{
+        position: relative;
+        left: 80;
+        width: 100%;
+        height: 35%;
+        font-size: 20px;
+
+        .buttons_upper_right{
+          border-top-right-radius: 35px;
+          border-bottom-right-radius: 35px;
+          background-color: #7b637f;
+          border: 4px black solid;
+        }
+
+        .buttons_upper_left{
+          border-top-left-radius: 35px;
+          border-bottom-left-radius: 35px;
+          background-color: #7b637f;
+          border: 4px black solid;
+
+        }
+
+        .upper_buttons_box1{
+          position: absolute;
+          margin-left: 3%;
+          width: 30%;
+          height: 96%;
+
+          .word_up1{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .word_down1{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .add_word1{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .delete_word1{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+        }
+        .upper_buttons_box2{
+            position: absolute;
+            margin-left: 35%;
+            width: 30%;
+            height: 96%;
+
+          .word_up2{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .word_down2{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .add_word2{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .delete_word2{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+        }
+        .upper_buttons_box3{
+            margin-left: 67%;
+            width: 30%;
+            height: 96%;
+
+          .word_up3{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .word_down3{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .add_word3{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+          .delete_word3{
+            width: 50%;
+            height: 50%;
+            font-size: 25px;
+            color: white;
+          }
+        }
+        .buttons_upper{
+          font-size: 25px;
+        }
+      }
+
+      .lower_buttons{
+        // background-color: white;
+        position: absolute;
+        width: 27%;
+        height: 33vh;
+        top: 35%;
+        left: 36.5%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1000px){
+          .buttons_down{
+            background-color: purple;
+          }
+        }
+
+        .buttons_down{
+          height: 37%;
+          width: 30%;
+          margin-top: 10px;
+          font-size: 35px;
+          color: black;
+          background-color: transparent;
+          border: none;
+        }
+        .fixed1{
+          border-radius: 50%;
+          border: 4px solid black;
+          background-color: yellow;
+
+        }
+        .fixed2{
+          left: 50%;
+          //margin-left: 6.5%;
+          border-radius: 50%;
+          border: 4px solid black;
+          background-color: yellow;
+
+        }
+        .fixed3{
+          right: 0px;
+          //margin-left: 6.5%;
+          border-radius: 50%;
+          border: 4px solid black;
+          background-color: yellow;
+
+        }
+        .hiddenbox{
+          //margin-top: 13%;
+          border-radius: 50%;
+          border: 4px solid black;
+          background-color: green;
+
+        }
+
+        .hidden{
+          background-color: red;
+        }
+      }
+
+      .save_button{
+        background-color: purple;
+        position: absolute;
+        width: 30%;
+        height: 60%;
+        border-bottom-left-radius: 16%;
+        border-top-right-radius: 58%;
+        margin-top: 19vh;
+        left: 0.8%;
+        border: 4px solid black;
+
+        .save_icon{
+          font-size: 14vw;
+        }
+      }
+        .save_button:active{
+          color: white;
+        }
+
+      .shuffle_button{
+        background-color: purple;
+        position: absolute;
+        width: 30%;
+        height: 60%;
+        border-bottom-right-radius: 16%;
+        border-top-left-radius: 58%;
+        margin-top: 19vh;
+        left: 69%;
+        border: 4px solid black;
+
+        .random_icon{
+          font-size: 14vw;
+        }
+      }
+      .shuffle_button:active{
+        color: white;
+      }
+    }
+  }
+}
