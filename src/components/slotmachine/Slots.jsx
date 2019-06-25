@@ -199,16 +199,15 @@ class Slot extends React.Component{
     this.setState({[key]:!this.state[key], old_state: this.state})
   }
 
-  saveCombination(){
+  saveCombination(input_string){
     if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
       return
     }
     this.props.saveCombination([
-      !this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id] : ' ', ' ',
-      !this.state.word_two_hidden ? this.state.lists[2][this.state.word_two_id] : ' ', ' ',
-      !this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : ' ', '|',' ',
-      this.props.idea_description
-
+      !this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id] : '', ' , ',
+      !this.state.word_two_hidden ? this.state.lists[2][this.state.word_two_id] : '',' , ',
+      !this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : '',' | ',
+      this.input_string
     ])
     this.setState({save_counter: this.state.save_counter +1, random_idea_counter:this.state.random_idea_counter +1})
     if(Math.random() >= 0.6 && !this.state.cool_down) {this.randomMotivator()}
@@ -219,12 +218,12 @@ class Slot extends React.Component{
   }
 
   closeIdeaInput(input_string){
-    if(this.state.idea_input_open){
-      this.props.saveIdea({
-        idea_description: input_string
-        })
-      }
-    this.saveCombination()
+    // if(this.state.idea_input_open){
+    //   this.props.saveIdea({
+    //     idea_description: input_string
+    //     })
+    //   }
+    this.saveCombination(input_string)
     this.setState({
       idea_input_open: false,
     })

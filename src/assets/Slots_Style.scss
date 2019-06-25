@@ -144,7 +144,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: yellow;
+        background-color: #E0CB84;
         border: 4px solid black;
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
@@ -355,7 +355,7 @@
         .fixed1{
           border-radius: 50%;
           border: 4px solid black;
-          background-color: yellow;
+          background-color: #E0CB84;
 
         }
         .fixed2{
@@ -363,7 +363,7 @@
           //margin-left: 6.5%;
           border-radius: 50%;
           border: 4px solid black;
-          background-color: yellow;
+          background-color: #E0CB84;
 
         }
         .fixed3{
@@ -371,14 +371,14 @@
           //margin-left: 6.5%;
           border-radius: 50%;
           border: 4px solid black;
-          background-color: yellow;
+          background-color: #E0CB84;
 
         }
         .hiddenbox{
           //margin-top: 13%;
           border-radius: 50%;
           border: 4px solid black;
-          background-color: green;
+          background-color: #6BC788;
 
         }
 
@@ -388,12 +388,11 @@
       }
 
       .save_button{
-        background-color: purple;
+        background-color: #47577A;
         position: absolute;
         width: 30%;
         height: 60%;
-        border-bottom-left-radius: 16%;
-        border-top-right-radius: 58%;
+        border-top-right-radius: 130px;
         margin-top: 19vh;
         left: 0.8%;
         border: 4px solid black;
@@ -407,12 +406,11 @@
         }
 
       .shuffle_button{
-        background-color: purple;
+        background-color: #47577A;
         position: absolute;
         width: 30%;
         height: 60%;
-        border-bottom-right-radius: 16%;
-        border-top-left-radius: 58%;
+        border-top-left-radius: 130px;
         margin-top: 19vh;
         left: 69%;
         border: 4px solid black;

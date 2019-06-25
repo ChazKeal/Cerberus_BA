@@ -28,7 +28,7 @@ class App extends React.Component{
     this.saveLists=this.saveLists.bind(this)
     this.saveDescriptions=this.saveDescriptions.bind(this)
     this.saveCombination=this.saveCombination.bind(this)
-    this.saveIdea=this.saveIdea.bind(this)
+    //this.saveIdea=this.saveIdea.bind(this)
   }
   saveLists(data){
     this.setState({lists:data})
@@ -39,15 +39,13 @@ class App extends React.Component{
   saveCombination(data){
     this.setState({saved_combinations: [...this.state.saved_combinations, data]})
   }
-  saveIdea(data){
-    this.setState({...this.state, ...data})
-  }
+
   render(){
     console.log(this.state);
     return(
       <div className='App'>
         { this.props.match.params.category === 'admin' ? <Admin lists={this.state.lists} saveLists={this.saveLists} saveDescriptions={this.saveDescriptions} short_description={this.state.short_description} long_description={this.state.long_description}/>:null}
-        { this.props.match.params.category === 'slot' ? <Slots lists={this.state.lists} short_description={this.state.short_description} long_description={this.state.long_description} saveCombination= {this.saveCombination} idea_description= {this.state.idea_description}
+        { this.props.match.params.category === 'slot' ? <Slots lists={this.state.lists} short_description={this.state.short_description} long_description={this.state.long_description} saveCombination= {this.saveCombination} idea_description= {this.state.idea_description  }
         saveIdea={this.saveIdea}/>:null}
         { this.props.match.params.category === 'menu' ? <Menu/>:null}
         { this.props.match.params.category === 'saves' ? <Save saved={this.state.saved_combinations}/>:null}
