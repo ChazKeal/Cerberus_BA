@@ -207,7 +207,7 @@ class Slot extends React.Component{
       !this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id] : '', ' , ',
       !this.state.word_two_hidden ? this.state.lists[2][this.state.word_two_id] : '',' , ',
       !this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : '',' | ',
-      this.input_string
+      input_string
     ])
     this.setState({save_counter: this.state.save_counter +1, random_idea_counter:this.state.random_idea_counter +1})
     if(Math.random() >= 0.6 && !this.state.cool_down) {this.randomMotivator()}
