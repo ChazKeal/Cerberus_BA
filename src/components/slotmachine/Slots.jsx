@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Bild from '../../assets/pics/background_cerberus.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ShuffleTone from '../../assets/sounds/ClickLight.mp3'
+import IdeaInput from './IdeaInput.jsx'
 
 import Timer from 'react-compound-timer'
 
@@ -47,6 +47,7 @@ class Slot extends React.Component{
       motivational_quote_id: null,
       cool_down: false,
       long_description_open: true,
+      idea_input_open: false,
     }
 
     this.shuffle=this.shuffle.bind(this);
@@ -61,6 +62,8 @@ class Slot extends React.Component{
     this.randomIdeaCounterLoop=this.randomIdeaCounterLoop.bind(this)
     this.randomMotivator= this.randomMotivator.bind(this);
     this.resetRandomMotivator= this.resetRandomMotivator.bind(this);
+    this.openIdeaInput= this.openIdeaInput.bind(this);
+    this.closeIdeaInput= this.closeIdeaInput.bind(this);
     // this.handleKeyPress= this.handleKeyPress.bind(this);
   }
   componentDidMount(){
@@ -195,6 +198,7 @@ class Slot extends React.Component{
     }
     this.setState({[key]:!this.state[key], old_state: this.state})
   }
+
   saveCombination(){
     if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
       return
@@ -202,10 +206,28 @@ class Slot extends React.Component{
     this.props.saveCombination([
       !this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id] : ' ', ' ',
       !this.state.word_two_hidden ? this.state.lists[2][this.state.word_two_id] : ' ', ' ',
-      !this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : ' ', ',', ' '
+      !this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : ' ', '|',' ',
+      this.props.idea_description
+
     ])
     this.setState({save_counter: this.state.save_counter +1, random_idea_counter:this.state.random_idea_counter +1})
     if(Math.random() >= 0.6 && !this.state.cool_down) {this.randomMotivator()}
+  }
+
+  openIdeaInput(e){
+    this.setState({idea_input_open:true})
+  }
+
+  closeIdeaInput(input_string){
+    if(this.state.idea_input_open){
+      this.props.saveIdea({
+        idea_description: input_string
+        })
+      }
+    this.saveCombination()
+    this.setState({
+      idea_input_open: false,
+    })
   }
 
   reDo(){
@@ -235,7 +257,6 @@ class Slot extends React.Component{
     }
   }
 
-
   render(){
     const shuffleTone = new Audio('../../assets/sounds/ClickLight.mp3')
     //const audio = new Audio("../public/sound.mp3")
@@ -252,6 +273,7 @@ class Slot extends React.Component{
               </div>
               :null
           }
+          { (this.state.idea_input_open) ? <IdeaInput closeIdeaInput={this.closeIdeaInput} description={this.props.idea_description}/> : null}
           <div className="header_container">
             <div className='save_counter_box'>Ideas:{this.state.save_counter}</div>
             <div className='timer_box'>All Ideas:
@@ -286,7 +308,7 @@ class Slot extends React.Component{
             </div>
           </div>
           <div className="button_container">
-            <button className="save_button" onClick={this.saveCombination}><FontAwesomeIcon icon="save" className="save_icon"/></button>
+            <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
             <button className="shuffle_button" onClick={this.shuffle}><FontAwesomeIcon icon="random" className="random_icon"/></button>
             <div className="upper_buttons">
               <div className="upper_buttons_box1">
@@ -322,4 +344,4 @@ class Slot extends React.Component{
     )
   }
 }
- export default Slot
+export default Slot

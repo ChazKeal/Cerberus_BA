@@ -21,6 +21,7 @@ class Administator extends React.Component{
     this.goToMenu=this.goToMenu.bind(this)
     this.openDescriptionInput=this.openDescriptionInput.bind(this)
   }
+  
   openListInput(e){
     //console.log(e.target.id)
     this.setState({open_list_id:e.target.id,input_open:true})
