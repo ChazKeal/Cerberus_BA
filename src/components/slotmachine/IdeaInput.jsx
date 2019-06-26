@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class IdeaInput extends React.Component{
   constructor(props){
@@ -17,13 +18,10 @@ class IdeaInput extends React.Component{
   }
   render(){
     return(
-      <div className="idea_input_container">
         <div className='idea_input_box'>
-          Idee
-          <textarea cols='20' rows='12' value={this.state.idea_string} onChange={this.onChange} autoFocus placeholder='Welche Idee hast du denn?'/>
-          <button onClick={this.closeIdeaInput}>Speichern und Schließen</button>
+          <textarea className='text_area_idea 'cols='20' rows='12' value={this.state.idea_string} onChange={this.onChange} autoFocus placeholder='Welche Idee hast du denn?'/>
+          <button className='close_idea_button' onClick={this.closeIdeaInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
         </div>
-      </div>
     )
   }
 }

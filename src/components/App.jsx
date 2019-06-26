@@ -5,10 +5,10 @@ import Slots from './slotmachine/Slots.jsx'
 import Admin from './admin/Admin.jsx'
 import Save from './saves/Saves.jsx'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import {faRandom, faSave, faPlus, faMinus, faLock, faLockOpen, faBan, faArrowUp, faArrowDown,faTimesCircle, faRedo,} from '@fortawesome/free-solid-svg-icons'
+import {faRandom, faSave, faPlus, faMinus, faLock, faLockOpen, faBan, faArrowUp, faArrowDown,faTimesCircle, faRedo,faLightbulb} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
-  faRandom, faSave, faPlus, faMinus, faLock, faLockOpen, faBan, faArrowUp, faArrowDown,faTimesCircle, faRedo,
+  faRandom, faSave, faPlus, faMinus, faLock, faLockOpen, faBan, faArrowUp, faArrowDown,faTimesCircle, faRedo, faLightbulb,
 )
 
 class App extends React.Component{
@@ -23,7 +23,7 @@ class App extends React.Component{
       short_description: "Du bist hier, weil du eine Idee brauchst. Mal sehen was dir so einfällt.",
       long_description: "Dies ist eine Ideengenerierung die auf dem Prinzip der Semantischen Intuition basiert. Nutze die Knöpfe die dir gegeben sind um die das Erlebnis anzupassen.",
       saved_combinations: [],
-      idea_description: "Hier steht gleich meine super Idee."
+      idea_description: "Hier steht gleich deine super Idee."
     }
     this.saveLists=this.saveLists.bind(this)
     this.saveDescriptions=this.saveDescriptions.bind(this)

@@ -249,8 +249,8 @@ class Slot extends React.Component{
     handleKeyPress = (event) => {
     if(event.key === ' '){
       this.shuffle()
-    } else if (event.key === 's'){
-      this.saveCombination()
+    // } else if (event.key === 's'){
+    //   this.openIdeaInput()
     } else {
       return
     }
@@ -307,7 +307,7 @@ class Slot extends React.Component{
             </div>
           </div>
           <div className="button_container">
-            <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
+            <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="lightbulb" className="lightbulb_icon"/></button>
             <button className="shuffle_button" onClick={this.shuffle}><FontAwesomeIcon icon="random" className="random_icon"/></button>
             <div className="upper_buttons">
               <div className="upper_buttons_box1">
