@@ -4,7 +4,7 @@
   background-color: black;
   width: 100%;
   height: 100%;
-  font-family: 'VT323', monospace, "Times New Roman",
+  font-family: 'Exo 2', monospace, "Times New Roman",
        Times, serif;
   outline: none;
   top: 0px;
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
-    font-size: 3.5vw;
+    font-size: 3vw;
     width: 90vw;
     height: 93%;
     box-shadow: 10px 5px 5px 1px rgba(0,0,0,0.7);
@@ -132,7 +132,7 @@
         left: 2%;
         justify-content: center;
         align-items: center;
-        font-size: 2.25vw;
+        font-size: 2vw;
       }
 
       .save_counter_box{
@@ -162,7 +162,7 @@
         border: 4px solid black;
         width: 47vw;
         height: 15vh;
-        font-size: 2.5vw;
+        font-size: 2vw;
       }
 
       .menu_button{
@@ -218,7 +218,6 @@
       .box {
         background-color: #bcbfca;
         border: 4px solid black;
-        border-radius: 60px;
         justify-content:center;
         align-items: center;
         display:flex;
@@ -229,12 +228,16 @@
       }
       .box_right{
         box-shadow: 10px 5px 5px 1px rgba(0,0,0,0.7);
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 60px;
       }
       .box_middle{
         box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.7);
       }
       .box_left{
-        box-shadow: -10px 5px 5px 1px rgba(0,0,0,0.7)
+        box-shadow: -10px 5px 5px 1px rgba(0,0,0,0.7);
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
       }
 
       .add_word_box{
