@@ -257,7 +257,6 @@ class Slot extends React.Component{
   }
 
   render(){
-    const shuffleTone = new Audio('../../assets/sounds/ClickLight.mp3')
     //const audio = new Audio("../public/sound.mp3")
     //const audio = new Audio("../public/sound.mp3")
     return(

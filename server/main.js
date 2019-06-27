@@ -1,14 +1,9 @@
 const express = require('express');
-
+const cors = require('cors')
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).json({
-    msg: "Server Test"
-  })
-})
-
-app.listen(4000);
+// Middleware
+app.use(cors())
 
 // data
 const lists = {
