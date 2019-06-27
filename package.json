@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "express": "^4.17.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-compound-timer": "^1.0.13",
@@ -17,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "node./server/main.js"
   },
   "eslintConfig": {
     "extends": "react-app"
