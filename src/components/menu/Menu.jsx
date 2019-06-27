@@ -12,7 +12,7 @@ class MainMenu extends React.Component{
         <div className="all_container">
           <div className="links">
             <div className="link link1"><Link to="/app/slot">Start</Link></div>
-            <div className="link link2"><Link to="/app/admin">Adminansicht</Link></div>
+            <div className="link link2"><Link to="/app/admin">Upload</Link></div>
             <div className="link link3"><Link to="/app/saves">Ergebnisse</Link></div>
           </div>
          <div className="textA"><strong>Willkommen zur interaktiven Ideenfindung mittels Semantischer Intuition.</strong><br />

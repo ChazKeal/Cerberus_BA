@@ -13,10 +13,10 @@ class Save extends React.Component{
         </div>
         <div className='text_container'>
           <ul>
-            { this.props.saved.map((save,index) => (
-                <li key={index} ><div>{ save }</div></li>
+            {this.props.saved ? this.props.saved.map((save,index) => (
+                <li key={index}><div>{ save }</div></li>
               )
-            )}
+            ): 'Hier sollten eigentlich Ideen stehen... hast du eine Blockade?'}
           </ul>
         </div>
       </div>

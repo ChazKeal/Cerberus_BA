@@ -4,7 +4,7 @@
   background-color: black;
   width: 100%;
   height: 100%;
-  font-family: 'Exo 2', monospace, "Times New Roman",
+  font-family: 'Orbitron', sans-serif, "Times New Roman",
        Times, serif;
   outline: none;
   top: 0px;
@@ -27,6 +27,7 @@
     margin-top: 2.5%;
     border-radius: 50px;
     border: 4px solid black;
+    font-family: Helvetica,serif;
     background-color: #bcbfca;
     display: flex;
     align-items: center;
@@ -76,28 +77,26 @@
       position: absolute;
       z-index: 2;
       border-radius: 25px;
-      margin-left: 11vw;
-      margin-top: 14vh;
-      width: 75.5vw;
-      height: 57vh;
+      margin-left: 0vw;
+      margin-top: 0vh;
+      width: 100%;
+      height: 48vh;
+      font-family: Helvetica,serif;
 
       .text_area_idea{
         position: absolute;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      border-radius: 50px;
-      outline: none;
-      border: 6px solid black;
-      box-shadow: 10px 5px 5px 1px rgba(0, 0, 0, 0.7);
-      background-color: #bcbfca;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5vw;
+        left: 0px;
+        width: 98.5%;
+        height: 100%;
+        border-radius: 25px;
+        outline: none;
+        border: 6px solid black;
+        background-color: #bcbfca;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4vw;
       }
-
 
       .close_idea_button{
         position: absolute;
@@ -108,8 +107,8 @@
         border: 4px solid black;
         border-radius: 50%;
         font-size: 5vw;
-        left: 47%;
-        top: -7vw;
+        left: 93%;
+        top: 0vw;  
         width: 7vw;
         height: 7vw;
       }
@@ -133,6 +132,7 @@
         justify-content: center;
         align-items: center;
         font-size: 2vw;
+        font-family: Helvetica,serif;
       }
 
       .save_counter_box{
@@ -148,6 +148,7 @@
         justify-content: center;
         align-items: center;
         font-size: 2.25vw;
+        font-family: Helvetica,serif;
       }
 
       .message_box{
@@ -164,6 +165,7 @@
         width: 47vw;
         height: 15vh;
         font-size: 2vw;
+        font-family: Helvetica,serif;
       }
 
       .menu_button{
@@ -225,7 +227,7 @@
         color: black;
         width: 32%;
         height: 13vh;
-        font-size: 5vh;
+        font-size: 4vh;
       }
       .box_right{
         box-shadow: 10px 5px 5px 1px rgba(0,0,0,0.7);
