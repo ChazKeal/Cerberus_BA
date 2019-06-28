@@ -39,7 +39,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lists: null,
+      lists : null,
       text: {
         short_description: "",
         long_description: "",

@@ -292,8 +292,9 @@ class Slot extends React.Component{
             <button className='redo_button' onClick={() => this.reDo()}><FontAwesomeIcon icon='redo' className='redo_icon'/></button>
           </div>
           <div className="box_container">
+            {this.state.lists ? (
             <div className="box box_left">
-              {!this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id] : null}
+              {!this.state.word_one_hidden ? this.state.lists[1][this.state.word_one_id]: null}
               {this.state.word_one_input ? <input className='add_word_box' type='text' autoFocus onKeyPress={(e) => {if (e.key==='Enter') this.addWord('1','word_one_id',e.target.value,"word_one_input","word_one_hidden") }}/>: null}
             </div>
             <div className="box box_middle">
@@ -303,7 +304,7 @@ class Slot extends React.Component{
             <div className="box box_right">
               {!this.state.word_three_hidden ? this.state.lists[3][this.state.word_three_id] : null}
               {this.state.word_three_input ? <input className='add_word_box' type='text' autoFocus onKeyPress={(e) => {if (e.key==='Enter') this.addWord('3','word_three_id',e.target.value,"word_three_input","word_three_hidden") }}/>: null}
-            </div>
+            </div>): null}
           </div>
           <div className="button_container">
             <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="lightbulb" className="lightbulb_icon"/></button>
