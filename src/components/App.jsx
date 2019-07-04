@@ -50,7 +50,7 @@ class App extends React.Component {
     this.saveLists = this.saveLists.bind(this);
     this.saveDescriptions = this.saveDescriptions.bind(this);
     this.saveCombination = this.saveCombination.bind(this);
-    //this.saveIdea=this.saveIdea.bind(this)
+    this.saveIdea=this.saveIdea.bind(this)
   }
 
   componentDidMount() {
@@ -73,6 +73,9 @@ class App extends React.Component {
     this.setState({
       saved_combinations: [...this.state.saved_combinations, data]
     });
+  }
+  saveIdea(data) {
+    this.setState({ ...this.state, ...data });
   }
 
   render() {

@@ -159,7 +159,7 @@ class Slot extends React.Component{
     this.setState({
       lists:{
         ...this.state.lists,
-        [target_id]:this.state.lists[target_id].filter((element,index) =>  index != this.state[word_key] )
+        [target_id]:this.state.lists[target_id].filter((element,index) =>  index !== this.state[word_key] )
       },
       [word_key]:0,
       old_state: this.state
