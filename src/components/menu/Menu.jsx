@@ -24,7 +24,7 @@ class MainMenu extends React.Component{
             <div className="link link1"><Link to="/app/slot">Start</Link></div>
             <div className="link link2"><Link to="/app/admin">Upload</Link></div>
             <div className='pass_container'>
-              <label for ='pass'>Passwort:</label>
+              <label HTMLfor ='pass'>Passwort:</label>
               <input className="password_ask" type='password' name='password' id='passwort_id'/>
             </div>
             <input type="button" value="zum Upload" onClick={this.askForPasswort} />

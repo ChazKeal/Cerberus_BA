@@ -71,7 +71,11 @@ class App extends React.Component {
   }
   saveCombination(data) {
     this.setState({
-      saved_combinations: [...this.state.saved_combinations, data]
+      ...this.state,
+      text: {
+        ...this.state.text,
+        saved_combinations: [...this.state.text.saved_combinations, data]
+      }
     });
   }
   saveIdea(data) {

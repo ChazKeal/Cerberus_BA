@@ -48,10 +48,11 @@
 
     .cases{
         flex-wrap: wrap;
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin: 2vh 5% 0 5%;
         display:flex;
         justify-content: center;
+        font-family: Helvetica,serif;
       .case{
           margin-right: 2%;
           margin-top: 2%;
@@ -60,7 +61,6 @@
           display: flex;
           color: black;
           width: 29%;
-          border-radius: 20%;
           border: 4px solid black;
           background-color: #bcbfca;
       }
