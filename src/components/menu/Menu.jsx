@@ -3,7 +3,17 @@ import { Link } from 'react-router-dom'
 import Bild from '../../assets/pics/Cerberus_saves_background.png'
 
 class MainMenu extends React.Component{
-
+//   constructor(props){
+//       super(props)
+//       this.askForPasswort=this.askForPasswort.bind(this);
+//     }
+// askForPasswort(a){
+//   var password = document.getElementById('password_id').value;
+//   if (password == "1234")
+//   {window.location = "/app/admin"}
+//   else
+//   {alert('Wrong Password')}
+// }
 
   render(){
     return (
@@ -13,6 +23,11 @@ class MainMenu extends React.Component{
           <div className="links">
             <div className="link link1"><Link to="/app/slot">Start</Link></div>
             <div className="link link2"><Link to="/app/admin">Upload</Link></div>
+            <div className='pass_container'>
+              <label for ='pass'>Passwort:</label>
+              <input className="password_ask" type='password' name='password' id='passwort_id'/>
+            </div>
+            <input type="button" value="zum Upload" onclick={this.askForPasswort} />
             <div className="link link3"><Link to="/app/saves">Ergebnisse</Link></div>
           </div>
          <div className="textA"><strong>Willkommen zur interaktiven Ideenfindung mittels Semantischer Intuition.</strong><br />
