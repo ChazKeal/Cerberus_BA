@@ -67,7 +67,7 @@ class App extends React.Component {
     this.setState({ lists: data });
   }
   saveDescriptions(data) {
-    this.setState({ ...this.state, ...data });
+    this.setState({text:{ ...this.state.text, ...data }});
   }
   saveCombination(data) {
     this.setState({
@@ -79,7 +79,7 @@ class App extends React.Component {
     });
   }
   saveIdea(data) {
-    this.setState({ ...this.state, ...data });
+    this.setState({text:{ ...this.state.text, ...data }});
   }
 
   render() {
@@ -107,7 +107,7 @@ class App extends React.Component {
         ) : null}
         {this.props.match.params.category === "menu" ? <Menu /> : null}
         {this.props.match.params.category === "saves" ? (
-          <Save saved={this.state.saved_combinations} />
+          <Save saved={this.state.text.saved_combinations} />
         ) : null}
       </div>
     );

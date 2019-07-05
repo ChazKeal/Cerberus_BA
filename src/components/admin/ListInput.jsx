@@ -4,7 +4,7 @@ class ListInput extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      list_string: this.props.list.join()
+      list_string: this.props.list.join(", ")
     }
     this.onChange=this.onChange.bind(this)
     this.closeInput=this.closeInput.bind(this)
