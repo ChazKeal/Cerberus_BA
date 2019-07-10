@@ -83,6 +83,16 @@ class Slot extends React.Component{
     }
   }
 
+  handleKeyPress = (event) => {
+    if(event.key === " "){
+      this.shuffle()
+     } else if (event.key === 'Enter' && this.state.idea_input_open === true){
+         this.closeIdeaInput(this.props.input_string)
+     } else {
+       return
+    }
+  }
+
   shuffle(){
     if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
       return
@@ -244,15 +254,6 @@ class Slot extends React.Component{
   resetRandomMotivator(){
     console.log("reset");
     this.setState({cool_down: false, motivational_quote_id: null})
-  }
-  handleKeyPress = (event) => {
-    if(event.charCode === 83){
-      this.shuffle()
-     } else if (event.key === 'Enter' && this.state.idea_input_open === true){
-         this.closeIdeaInput(this.props.input_string)
-     } else {
-       return
-    }
   }
 
   render(){
