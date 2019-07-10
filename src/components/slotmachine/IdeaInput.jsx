@@ -14,8 +14,16 @@ class IdeaInput extends React.Component{
     this.setState({idea_string:e.target.value})
   }
   closeIdeaInput(){
-    this.props.closeIdeaInput(this.state.idea_string)
+    this.props.closeIdeaInput()
   }
+
+  // handleKeyPress = (event) => {
+  //   if (event.key === 'Enter'){
+  //    this.props.closeIdeaInput(this.state.idea_string)
+  // } else {
+  //   return
+  // }
+//  }
   render(){
     return(
         <div className='idea_input_box'>

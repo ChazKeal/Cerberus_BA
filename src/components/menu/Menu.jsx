@@ -23,11 +23,6 @@ class MainMenu extends React.Component{
           <div className="links">
             <div className="link link1"><Link to="/app/slot">Start</Link></div>
             <div className="link link2"><Link to="/app/admin">Upload</Link></div>
-            <div className='pass_container'>
-              <label HTMLfor ='pass'>Passwort:</label>
-              <input className="password_ask" type='password' name='password' id='passwort_id'/>
-            </div>
-            <input type="button" value="zum Upload" onClick={this.askForPasswort} />
             <div className="link link3"><Link to="/app/saves">Ergebnisse</Link></div>
           </div>
          <div className="textA"><strong>Willkommen zur interaktiven Ideenfindung mittels Semantischer Intuition.</strong><br />

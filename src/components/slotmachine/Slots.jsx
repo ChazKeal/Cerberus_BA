@@ -64,7 +64,6 @@ class Slot extends React.Component{
     this.resetRandomMotivator= this.resetRandomMotivator.bind(this);
     this.openIdeaInput= this.openIdeaInput.bind(this);
     this.closeIdeaInput= this.closeIdeaInput.bind(this);
-    // this.handleKeyPress= this.handleKeyPress.bind(this);
   }
   componentDidMount(){
     setTimeout(this.randomIdeaCounterLoop, 0)
@@ -246,13 +245,13 @@ class Slot extends React.Component{
     console.log("reset");
     this.setState({cool_down: false, motivational_quote_id: null})
   }
-    handleKeyPress = (event) => {
-    if(event.key === ' '){
+  handleKeyPress = (event) => {
+    if(event.charCode === 82){
       this.shuffle()
-    } else if (event.key === 'Enter' && this.state.idea_input_open === true){
-       this.closeIdeaInput()
-    } else {
-      return
+     } else if (event.key === 'Enter' && this.state.idea_input_open === true){
+         this.closeIdeaInput(this.props.input_string)
+     } else {
+       return
     }
   }
 
@@ -310,7 +309,7 @@ class Slot extends React.Component{
           </div>
           <div className="button_container">
             <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="lightbulb" className="lightbulb_icon"/></button>
-            <button className="shuffle_button" onClick={this.shuffle}><FontAwesomeIcon icon="random" className="random_icon"/></button>
+            <button className="shuffle_button" onClick={this.shuffle} onKeyPress={this.handleKeyPress}><FontAwesomeIcon icon="random" className="random_icon"/></button>
             <div className="upper_buttons">
               <div className="upper_buttons_box1">
                 <button className="buttons_upper_left word_up1" onClick={() => this.scrollUp("1")}><FontAwesomeIcon icon="arrow-up" className="arrow_up_icon"/></button>
