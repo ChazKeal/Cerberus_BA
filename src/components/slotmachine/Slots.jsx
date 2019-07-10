@@ -84,7 +84,7 @@ class Slot extends React.Component{
   }
 
   handleKeyPress = (event) => {
-    if(event.key === " "){
+    if(event.key === "Backspace"){
       this.shuffle()
      } else {
        return
@@ -92,7 +92,7 @@ class Slot extends React.Component{
   }
 
   shuffle(){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input || this.state.idea_input_open){
       return
     }
     this.setState({
@@ -103,7 +103,7 @@ class Slot extends React.Component{
     })
   }
   scrollUp(target_id){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input  || this.state.idea_input_open){
       return
     }
     let new_id
@@ -125,7 +125,7 @@ class Slot extends React.Component{
     }
   }
   scrollDown(target_id){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input  || this.state.idea_input_open){
       return
     }
     let new_id
@@ -147,7 +147,7 @@ class Slot extends React.Component{
   }
 
   deleteWord(target_id){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input  || this.state.idea_input_open){
       return
     }
     let word_key
@@ -190,7 +190,7 @@ class Slot extends React.Component{
   }
 
   wordInput(input_key, key){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input  || this.state.idea_input_open){
       return
     }
     this.setState({
@@ -200,7 +200,7 @@ class Slot extends React.Component{
   }
 
   toggleStateSwitch(key){
-    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input){
+    if ( this.state.word_one_input || this.state.word_two_input || this.state.word_three_input  || this.state.idea_input_open){
       return
     }
     this.setState({[key]:!this.state[key], old_state: this.state})
@@ -303,7 +303,7 @@ class Slot extends React.Component{
           </div>
           <div className="button_container">
             <button className="save_button" onClick={this.openIdeaInput}><FontAwesomeIcon icon="lightbulb" className="lightbulb_icon"/></button>
-            <button className="shuffle_button" onClick={this.shuffle} onKeyPress={this.handleKeyPress}><FontAwesomeIcon icon="random" className="random_icon"/></button>
+            <button className="shuffle_button" onClick={this.shuffle}><FontAwesomeIcon icon="random" className="random_icon"/></button>
             <div className="upper_buttons">
               <div className="upper_buttons_box1">
                 <button className="buttons_upper_left word_up1" onClick={() => this.scrollUp("1")}><FontAwesomeIcon icon="arrow-up" className="arrow_up_icon"/></button>
