@@ -86,8 +86,6 @@ class Slot extends React.Component{
   handleKeyPress = (event) => {
     if(event.key === " "){
       this.shuffle()
-     } else if (event.key === 'Enter' && this.state.idea_input_open === true){
-         this.closeIdeaInput(this.props.input_string)
      } else {
        return
     }
