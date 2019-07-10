@@ -225,11 +225,6 @@ class Slot extends React.Component{
   }
 
   closeIdeaInput(input_string){
-    if(this.state.idea_input_open){
-      this.props.saveIdea({
-        idea_description: input_string
-        })
-      }
     this.saveCombination(input_string)
     this.setState({
       idea_input_open: false,
@@ -269,7 +264,7 @@ class Slot extends React.Component{
               </div>
               :null
           }
-          { (this.state.idea_input_open) ? <IdeaInput closeIdeaInput={this.closeIdeaInput} description={this.props.idea_description}/> : null}
+          { (this.state.idea_input_open) ? <IdeaInput closeIdeaInput={this.closeIdeaInput}/> : null}
           <div className="header_container">
             <div className='save_counter_box'>Ideas:{this.state.save_counter}</div>
             <div className='timer_box'>All Ideas:

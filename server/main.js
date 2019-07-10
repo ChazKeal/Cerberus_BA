@@ -17,8 +17,7 @@ const text = {
     "Du bist hier, weil du eine Idee brauchst. Mal sehen was dir so einfällt.",
   long_description:
     "Dies ist eine Ideengenerierung die auf dem Prinzip der Semantischen Intuition basiert. Nutze die Knöpfe die dir gegeben sind um die das Erlebnis anzupassen.",
-  saved_combinations: [],
-  idea_description: "Hier steht gleich deine super Idee."
+  saved_combinations: []
 };
 
 // index route

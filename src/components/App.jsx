@@ -44,13 +44,11 @@ class App extends React.Component {
         short_description: "",
         long_description: "",
         saved_combinations: [],
-        idea_description: ""
       }
     };
     this.saveLists = this.saveLists.bind(this);
     this.saveDescriptions = this.saveDescriptions.bind(this);
     this.saveCombination = this.saveCombination.bind(this);
-    this.saveIdea=this.saveIdea.bind(this)
   }
 
   componentDidMount() {
@@ -78,9 +76,7 @@ class App extends React.Component {
       }
     });
   }
-  saveIdea(data) {
-    this.setState({text:{ ...this.state.text, ...data }});
-  }
+
 
   render() {
     console.log(this.state);
@@ -101,8 +97,6 @@ class App extends React.Component {
             short_description={this.state.text.short_description}
             long_description={this.state.text.long_description}
             saveCombination={this.saveCombination}
-            idea_description={this.state.text.idea_description}
-            saveIdea={this.saveIdea}
           />
         ) : null}
         {this.props.match.params.category === "menu" ? <Menu /> : null}
