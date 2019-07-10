@@ -246,7 +246,7 @@ class Slot extends React.Component{
     this.setState({cool_down: false, motivational_quote_id: null})
   }
   handleKeyPress = (event) => {
-    if(event.charCode === 82){
+    if(event.charCode === 83){
       this.shuffle()
      } else if (event.key === 'Enter' && this.state.idea_input_open === true){
          this.closeIdeaInput(this.props.input_string)
