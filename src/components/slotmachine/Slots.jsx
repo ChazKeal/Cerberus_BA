@@ -244,7 +244,7 @@ class Slot extends React.Component{
 
   randomIdeaCounterLoop(){
     if(Math.random() >= 0.99 ) {this.setState({random_idea_counter:this.state.random_idea_counter +1})}
-    this._randomIdeaCounterLoop = setTimeout(this.randomIdeaCounterLoop, 50)
+    this._randomIdeaCounterLoop = setTimeout(this.randomIdeaCounterLoop, 100)
   }
 
   randomMotivator(){
