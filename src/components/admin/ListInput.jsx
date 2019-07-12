@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class ListInput extends React.Component{
   constructor(props){
@@ -21,7 +22,7 @@ class ListInput extends React.Component{
         <div className='input_box'>
           Liste {this.props.list_id}
           <textarea cols='20' rows='12' value={this.state.list_string} onChange={this.onChange} autoFocus placeholder='Einfügen oder Eingeben der Wortliste. Getrennt durch ein Komma und ein Leerzeichen'/>
-          <button onClick={this.closeInput}>Speichern und Schließen</button>
+          <button className="input_save_button" onClick={this.closeInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
         </div>
       </div>
     )

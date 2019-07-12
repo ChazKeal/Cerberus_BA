@@ -236,7 +236,7 @@ class Slot extends React.Component{
     this.setState({
       idea_input_open: false,
     })
-  }
+}
 
   reDo(){
     this.setState({...this.state.old_state, save_counter: this.state.save_counter, random_idea_counter:this.state.random_idea_counter})
@@ -271,7 +271,7 @@ class Slot extends React.Component{
               </div>
               :null
           }
-          { (this.state.idea_input_open) ? <IdeaInput closeIdeaInput={this.closeIdeaInput} stopIdeaInput={() => this.stopIdeaInput}/> : null}
+          { (this.state.idea_input_open) ? <IdeaInput closeIdeaInput={this.closeIdeaInput} stopIdeaInput={this.stopIdeaInput}/> : null}
           <div className="header_container">
             <div className='save_counter_box'>Ideas:{this.state.save_counter}</div>
             <div className='timer_box'>All Ideas:

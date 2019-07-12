@@ -18,7 +18,7 @@ class IdeaInput extends React.Component{
   onChange(e){
     this.setState({idea_string:e.target.value})
   }
-  closeIdeaInput(){
+  closeIdeaInput(idea_string){
     this.props.closeIdeaInput(this.state.idea_string)
   }
   stopIdeaInput(){
@@ -37,7 +37,7 @@ class IdeaInput extends React.Component{
         <div className='idea_input_box'>
           <textarea className='text_area_idea 'cols='20' rows='12' value={this.state.idea_string} onChange={this.onChange} autoFocus placeholder='Welche Idee hast du denn?'/>
           <button className='close_idea_button' onClick={this.closeIdeaInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
-          <button className='stop_idea_input' onClick={() => this.props.stopIdeaInput}><FontAwesomeIcon icon="times-circle" className="exit_icon"/></button>
+          <button className='stop_idea_button' onClick={this.stopIdeaInput}><FontAwesomeIcon icon="times-circle" className="exit_icon"/></button>
         </div>
     )
   }

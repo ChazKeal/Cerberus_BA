@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class DescriptionInput extends React.Component{
   constructor(props){
@@ -21,7 +22,7 @@ class DescriptionInput extends React.Component{
         <div className='input_box'>
           Beschreibung
           <textarea cols='20' rows='12' value={this.state.description_string} onChange={this.onChange} autoFocus placeholder='Einfügen oder Eingeben der Beschreibung'/>
-          <button onClick={this.closeInput}>Speichern und Schließen</button>
+          <button className='input_save_button' onClick={this.closeInput}><FontAwesomeIcon icon="save" className="save_icon"/></button>
         </div>
       </div>
     )

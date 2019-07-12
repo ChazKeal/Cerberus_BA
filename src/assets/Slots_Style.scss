@@ -82,20 +82,26 @@
       width: 100%;
       height: 48vh;
       font-family: Helvetica,serif;
+      border-radius: 25px;
+      outline: none;
+      border: 6px solid black;
+      background-color: #bcbfca;
+      opacity: 0.8;
+      outline: none;
 
       .text_area_idea{
         position: absolute;
         left: 0px;
         width: 98.5%;
         height: 100%;
-        border-radius: 25px;
-        outline: none;
-        border: 6px solid black;
-        background-color: #bcbfca;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 4vw;
+        background: none;
+        opacity: 1;
+        outline: none;
+        border: none;
       }
 
       .close_idea_button{
@@ -111,9 +117,10 @@
         top: 0vw;
         width: 7vw;
         height: 7vw;
+        opacity: 0.9;
       }
 
-      .stop_idea_input{
+      .stop_idea_button{
         position: absolute;
         display: flex;
         align-items: center;
@@ -126,6 +133,7 @@
         top: 0vw;
         width: 7vw;
         height: 7vw;
+        opacity: 0.9;
       }
     }
 
